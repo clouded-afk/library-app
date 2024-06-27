@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -16,7 +17,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 150px;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 2px -2px #a3a3a3;
 }
 
 .page-title {
@@ -49,6 +50,19 @@ header {
     border: 1px solid #3f6212;
 }
 
-.page-title {
-    border: 1px solid red;
+.table-container {
+    margin-top: 15px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #1a2e05;
+    color: white;
+    height: 50px;
 }
