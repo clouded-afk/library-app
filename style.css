@@ -1,3 +1,54 @@
 * {
-    background-color: gray;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.page-title {
+    font-size: 40px;
+    margin-left: 15%;
+}
+
+.new-book-button {
+    margin-right: 15%;
+}
+
+.open-form {
+    width: 150px;
+    height: 50px;
+    background-color: #1a2e05;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 40px;
+    border: 1px solid #1a2e05;
+}
+
+.open-form:hover {
+    background-color: #365314;
+    border: 1px solid #365314;
+}
+
+.open-form:active {
+    background-color: #3f6212;
+    border: 1px solid #3f6212;
+}
+
+.page-title {
+    border: 1px solid red;
 }
