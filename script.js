@@ -25,3 +25,47 @@ function Book(title, author, pageCount, read) {
     this.pageCount = pageCount;
     this.read = read;
 }
+
+
+
+function addBookToLibrary(newBook) {
+}
+
+function createNewCell(data) {
+    const newCell = document.createElement("td");
+    newCell.innerHTML = data;
+    return newCell
+}
+
+function createNewRow(book, index) {
+    const newRow = document.createElement("tr");
+    newRow.dataset.index = index;
+    newRow.appendChild(createNewCell(book.title));
+    newRow.appendChild(createNewCell(book.author));
+    newRow.appendChild(createNewCell(book.pageCount));
+    return newRow
+}
+
+function displayBooks() {
+    const tableBody = document.querySelector("tbody");
+
+    myLibrary.forEach((book, index) => {
+        tableBody.appendChild(createNewRow(book, index))
+    })
+}
+
+const dialog = document.querySelector("dialog");
+const newBookButton = document.querySelector(".open-form")
+
+newBookButton.addEventListener("click", () => {
+    dialog.showModal();
+})
+
+const closeForm = document.querySelector(".close-form-button")
+
+closeForm.addEventListener("click", () => {
+    dialog.close();
+})
+
+displayBooks();
+
