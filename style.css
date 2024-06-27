@@ -59,10 +59,63 @@ header {
 table {
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid black;
 }
 
 thead {
     background-color: #1a2e05;
     color: white;
     height: 50px;
+}
+
+tr {
+    height: 50px;
+}
+
+.form-container {
+    border-radius: 10px;
+    height: 500px;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.form-body {
+    height: 350px;
+}
+
+.form-input:nth-child(-n+3) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+#book-title, #book-author, #page-count {
+    height: 25px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #cbd5e1;
+    border: none;
+    margin-top: 10px;
+}
+
+#book-title:focus, #book-author:focus, #page-count:focus {
+    outline: 2px solid #3b82f6;
+}
+
+.form-body:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-footer {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
