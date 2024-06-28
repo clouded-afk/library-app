@@ -78,7 +78,7 @@ newBookButton.addEventListener("click", () => {
     dialog.showModal();
 })
 
-const closeForm = document.querySelector(".close-form-button")
+const closeForm = document.querySelector(".close-form-button");
 
 closeForm.addEventListener("click", () => {
     dialog.close();
