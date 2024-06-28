@@ -40,12 +40,12 @@ header {
     border: 1px solid #1a2e05;
 }
 
-.open-form:hover {
+.open-form:hover, .submit-button:hover {
     background-color: #365314;
     border: 1px solid #365314;
 }
 
-.open-form:active {
+.open-form:active, .submit-button:active {
     background-color: #3f6212;
     border: 1px solid #3f6212;
 }
@@ -75,17 +75,25 @@ tr {
 .form-container {
     border-radius: 10px;
     height: 500px;
+    width: 500px;
+    margin-top: 250px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px #a3a3a3;
 }
 
 .form-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
 
+.close-form-button {
+    border: 1px solid red;
+    color: red;
 }
 
 .form-body {
-    height: 350px;
+    height: 325px;
 }
 
 .form-input:nth-child(-n+3) {
@@ -114,8 +122,36 @@ tr {
 }
 
 .form-footer {
-    padding-top: 20px;
+    padding-top: 5px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.clear-button, .submit-button {
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+.clear-button {
+    background-color: #9f1239;
+    border: 1px solid #9f1239;
+}
+
+.clear-button:hover {
+    background-color: #be123c;
+    border: 1px solid #be123c;
+}
+
+.clear-button:active {
+    background-color: #f43f5e;
+    border: 1px solid #f43f5e;
+}
+
+.submit-button {
+    background-color: #1a2e05;
+    border: 1px solid #1a2e05;
 }
