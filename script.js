@@ -82,6 +82,7 @@ const closeForm = document.querySelector(".close-form-button");
 
 closeForm.addEventListener("click", () => {
     dialog.close();
+    form.reset();
 })
 
 displayBooks();
