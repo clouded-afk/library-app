@@ -26,9 +26,9 @@ function Book(title, author, pageCount, read) {
     this.read = read;
 }
 
-
-
 function addBookToLibrary(newBook) {
+    myLibrary.unshift(newBook);
+    displayBooks();
 }
 
 function createNewCell(data) {
@@ -36,6 +36,22 @@ function createNewCell(data) {
     newCell.innerHTML = data;
     return newCell
 }
+
+const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const titleData = document.getElementById("book-title").value;
+    const authorData = document.getElementById("book-author").value;
+    const pageData = document.getElementById("page-count").value;
+    const readStatus = document.querySelector('input[name="read-status"]').checked;
+
+    const newBook = new Book(titleData, authorData, pageData, readStatus);
+    addBookToLibrary(newBook);
+    
+    dialog.close();
+    form.reset();
+})
 
 function createNewRow(book, index) {
     const newRow = document.createElement("tr");
@@ -48,6 +64,7 @@ function createNewRow(book, index) {
 
 function displayBooks() {
     const tableBody = document.querySelector("tbody");
+    tableBody.innerHTML = "";
 
     myLibrary.forEach((book, index) => {
         tableBody.appendChild(createNewRow(book, index))
@@ -69,3 +86,4 @@ closeForm.addEventListener("click", () => {
 
 displayBooks();
 
+console.log(myLibrary)
