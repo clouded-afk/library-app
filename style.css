@@ -90,6 +90,7 @@ tr {
 .close-form-button {
     border: 1px solid red;
     color: red;
+    float: right;
 }
 
 .form-body {
