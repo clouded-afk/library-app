@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Library</title>
-</head>
-<body>
-    <div class="main-container">
-        <header>
-            <h1 class="page-title">Personal Library</h1>
-            <div class="new-book-button">
-                <button class="open-form">New Book</button>
-            </div>  
-        </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Library</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <header>
+                <h1 class="page-title">Personal Library</h1>
+                <div class="new-book-button">
+                    <button class="open-form">New Book</button>
+                </div>  
+            </header>
 
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Book Title</th>
-                        <th>Author</th>
-                        <th>Page Count</th>
-                        <th>Been Read?</th>
-                        <th>Delete?</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Page Count</th>
+                            <th>Been Read?</th>
+                            <th>Delete?</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
 
             <dialog class="form-container">
-                <form class="book-form">
+                <button class="close-form-button">X</button>
+                <form>
                     <div class="form-header">
                         <h2 class="form-header-text">Add New Book</h2>
-                        <button class="close-form-button">X</button>
                     </div>
 
                     <div class="form-body">
@@ -68,8 +69,7 @@
                 </form>
             </dialog>
         </div>
-    </div>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
