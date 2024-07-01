@@ -26,15 +26,64 @@ function Book(title, author, pageCount, read) {
     this.read = read;
 }
 
+function toggleRead(book) {
+    if (book.read === false) {
+        book.read = true;
+    } else {
+        book.read = false;
+    }
+}
+
 function addBookToLibrary(newBook) {
     myLibrary.unshift(newBook);
     displayBooks();
 }
 
+function deleteBookFromLibrary(index) {
+    myLibrary.splice(index, 1);
+    displayBooks();
+}
+
 function createNewCell(data) {
     const newCell = document.createElement("td");
-    newCell.innerHTML = data;
+    newCell.innerText = data;
     return newCell
+}
+
+function createReadToggle(book) {
+    const cell = document.createElement("td");
+    cell.classList.add("read-cell")
+
+    const readButton = document.createElement("button");
+    readButton.innerText = book.read ? "Read" : "Not Read Yet";
+    readButton.classList.toggle("read", book.read)
+    readButton.classList.toggle("not-read", !book.read)
+
+    readButton.addEventListener("click", function () {
+        toggleRead(book);
+        displayBooks();
+    })
+
+    cell.appendChild(readButton)
+
+    return cell
+}
+
+function createBookDelete() {
+    const cell = document.createElement("td");
+    cell.classList.add("del-cell")
+
+    const delButton = document.createElement("button");
+    delButton.id = "delete-button";
+    delButton.innerText = "Delete";
+    delButton.addEventListener("click", (event) => {
+        const rowIndex = event.currentTarget.closest("tr").dataset.index;
+        deleteBookFromLibrary(rowIndex);
+    })
+
+    cell.appendChild(delButton);
+
+    return cell;
 }
 
 const form = document.querySelector("form");
@@ -59,6 +108,8 @@ function createNewRow(book, index) {
     newRow.appendChild(createNewCell(book.title));
     newRow.appendChild(createNewCell(book.author));
     newRow.appendChild(createNewCell(book.pageCount));
+    newRow.appendChild(createReadToggle(book));
+    newRow.appendChild(createBookDelete());
     return newRow
 }
 
@@ -86,5 +137,3 @@ closeForm.addEventListener("click", () => {
 })
 
 displayBooks();
-
-console.log(myLibrary)
