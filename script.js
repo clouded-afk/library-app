@@ -47,31 +47,31 @@ function deleteBookFromLibrary(index) {
 function createNewCell(data) {
     const newCell = document.createElement("td");
     newCell.innerText = data;
-    return newCell
+    return newCell;
 }
 
 function createReadToggle(book) {
     const cell = document.createElement("td");
-    cell.classList.add("read-cell")
+    cell.classList.add("read-cell");
 
     const readButton = document.createElement("button");
     readButton.innerText = book.read ? "Read" : "Not Read Yet";
-    readButton.classList.toggle("read", book.read)
-    readButton.classList.toggle("not-read", !book.read)
+    readButton.classList.toggle("read", book.read);
+    readButton.classList.toggle("not-read", !book.read);
 
     readButton.addEventListener("click", function () {
         toggleRead(book);
         displayBooks();
     })
 
-    cell.appendChild(readButton)
+    cell.appendChild(readButton);
 
-    return cell
+    return cell;
 }
 
 function createBookDelete() {
     const cell = document.createElement("td");
-    cell.classList.add("del-cell")
+    cell.classList.add("del-cell");
 
     const delButton = document.createElement("button");
     delButton.id = "delete-button";
@@ -123,7 +123,7 @@ function displayBooks() {
 }
 
 const dialog = document.querySelector("dialog");
-const newBookButton = document.querySelector(".open-form")
+const newBookButton = document.querySelector(".open-form");
 
 newBookButton.addEventListener("click", () => {
     dialog.showModal();
