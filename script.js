@@ -19,11 +19,13 @@ const myLibrary = [
     }
 ];
 
-function Book(title, author, pageCount, read) {
-    this.title = title;
-    this.author = author;
-    this.pageCount = pageCount;
-    this.read = read;
+class Book {
+    constructor(title, author, pageCount, read) {
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount;
+        this.read = read;
+    }
 }
 
 function toggleRead(book) {
@@ -120,6 +122,7 @@ function displayBooks() {
     myLibrary.forEach((book, index) => {
         tableBody.appendChild(createNewRow(book, index))
     })
+    console.log(myLibrary)
 }
 
 const dialog = document.querySelector("dialog");
