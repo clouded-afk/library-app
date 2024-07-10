@@ -122,7 +122,6 @@ function displayBooks() {
     myLibrary.forEach((book, index) => {
         tableBody.appendChild(createNewRow(book, index))
     })
-    console.log(myLibrary)
 }
 
 const dialog = document.querySelector("dialog");
